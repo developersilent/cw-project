@@ -1,7 +1,6 @@
 import {
   IconClock,
   IconCloudRain,
-  IconCopyright,
   IconDatabaseExport,
   IconDoorOff,
   IconGhost,
@@ -150,7 +149,7 @@ export default function HomePage() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#ffffff] dark:bg-[#1e1e1e]">
         <p className="text-xs text-[#333] dark:text-[#f8f8f8]">
-          <IconCopyright /> 2024 cw.project.com. All rights reserved.
+          &copy; 2024 cw.project.com. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link
