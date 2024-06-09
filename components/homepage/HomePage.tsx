@@ -7,9 +7,7 @@ import {
   IconGhost,
   IconWindow,
 } from "@tabler/icons-react";
-
 import Link from "next/link";
-
 import image from "@/./public/curage (1).png";
 import Image from "next/image";
 import RevealAnimation from "../animation/RevealAnimation";
@@ -65,7 +63,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 grid gap-1">
                 <div className="inline-block rounded-lg px-3 py-2 w-full font-semibold text-xl text-[#26314b]">
-                  Courage's Home
+                  Courage&apos;s Home
                 </div>
                 <RevealAnimationWithXFromLeft>
                   <h2 className="text-3xl font-bold tracking-tighter text-[#333] sm:text-5xl dark:text-[#f8f8f8]">
@@ -76,7 +74,7 @@ export default function HomePage() {
                   <p className="max-w-[900px] text-[17px] text-[#333] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#f8f8f8]">
                     Courage and his owners, Muriel and Eustace, live in a small,
                     isolated farmhouse in the middle of Nowhere, Kansas. This
-                    remote location is the perfect setting for Courage's
+                    remote location is the perfect setting for Courage&apos;s
                     adventures, as it is often the target of supernatural and
                     otherworldly threats.
                   </p>
@@ -93,7 +91,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-2 grid gap-1 place-content-center">
                 <div className="inline-block rounded-lg w-full px-3 py-2 text-xl font-semibold text-[#1e2b38] dark:bg-gray-600">
-                  Courage's Defenses
+                  Courage&apos;s Defenses
                 </div>
                 <RevealAnimationWithXFromRight>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-800 sm:text-5xl dark:text-gray-100">
@@ -152,7 +150,7 @@ export default function HomePage() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#ffffff] dark:bg-[#1e1e1e]">
         <p className="text-xs text-[#333] dark:text-[#f8f8f8]">
-          <IconCopyright/> 2024 cw.project.com. All rights reserved.
+          <IconCopyright /> 2024 cw.project.com. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link

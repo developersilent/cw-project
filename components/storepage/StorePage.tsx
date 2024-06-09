@@ -5,10 +5,10 @@ import { toolsData } from "@/tools-data";
 import TextAnimation from "../animation/TextAnimation";
 import RevealAnimation from "../animation/RevealAnimation";
 
-const StorePage = () => {
+export default function StorePage() {
   const melee = toolsData.melee;
   const throwable = toolsData.throwable;
-  const renderItems = useCallback(() => {
+  const renderItems = useCallback(function(){
     const th = throwable.map((item) => (
       <RevealAnimation key={item.id}>
         <ItemsCard
@@ -37,7 +37,7 @@ const StorePage = () => {
       </RevealAnimation>
     ));
     return [...th, ...melees];
-  }, [throwable]);
+  }, [throwable, melee]);
 
   return (
     <>
@@ -71,5 +71,3 @@ const StorePage = () => {
     </>
   );
 };
-
-export default StorePage;
