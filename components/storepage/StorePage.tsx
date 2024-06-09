@@ -10,7 +10,7 @@ const StorePage = () => {
   const throwable = toolsData.throwable;
   const renderItems = useCallback(() => {
     const th = throwable.map((item) => (
-      <RevealAnimation>
+      <RevealAnimation key={item.id}>
         <ItemsCard
           key={item.title}
           description={item.description}
@@ -24,7 +24,7 @@ const StorePage = () => {
     ));
 
     const melees = melee.map((item) => (
-      <RevealAnimation>
+      <RevealAnimation key={item.id}>
         <ItemsCard
           key={item.title}
           description={item.description}

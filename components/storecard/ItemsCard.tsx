@@ -1,13 +1,13 @@
 "use client";
+import { useCallback,memo } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { SingleCardProps } from "@/types/Types";
 import { addToCart } from "@/helper/redux-store/slices-functions/StoreSlice";
 import { useAppDispatch } from "@/helper/hook/redux-store-hook";
-import React, { useCallback } from "react";
 
-const ItemsCard = React.memo(
+const ItemsCard = memo(
   ({ description, img, price, title, id,typeOfData }: SingleCardProps) => {
     const dispatch = useAppDispatch();
     const handleAddToCart = useCallback(() => {

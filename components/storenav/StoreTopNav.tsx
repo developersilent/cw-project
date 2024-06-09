@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback } from "react";
+import { useCallback, memo } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -50,4 +50,4 @@ const StoreTopNav = () => {
   );
 };
 
-export default React.memo(StoreTopNav);
+export default memo(StoreTopNav);
