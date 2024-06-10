@@ -7,7 +7,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export default function NavigationMenu() {
   return (
-    <header className="flex h-16 w-full items-center justify-between px-4 md:px-6 bg-white">
+    <header className="flex h-24 w-full items-start p-3 justify-between px-4 md:px-6 bg-gradient-to-b from-white via-white">
       <Link href="/" className="flex items-center" prefetch={false}>
         <IconBone className="h-6 w-6" />
       </Link>
@@ -85,7 +85,7 @@ export default function NavigationMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHubLogoIcon className="w-7 h-7"/>
+                <GitHubLogoIcon className="w-7 h-7" />
               </Link>
             </nav>
           </div>

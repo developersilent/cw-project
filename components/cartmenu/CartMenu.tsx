@@ -39,7 +39,7 @@ export default function CartMenu() {
         {itemsCount === 0 ? (
           <EmptyCart />
         ) : (
-          <div className="h-full w-full px-4 py-7 overflow-hidden">
+          <div className="h-full w-full px-4 py-4 overflow-hidden">
             <div className="flex h-full flex-col">
               <div className="mb-6 border-b pb-4 flex items-center justify-between">
                 <h2 className="text-xl">Cart</h2>

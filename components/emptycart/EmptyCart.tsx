@@ -12,7 +12,7 @@ export default function EmptyCart() {
             Your cart is empty.
           </p>
         </div>
-        <SheetClose className="w-full max-w-[200px] bg-[#D8EFD3] outline-none border border-border p-1 rounded-md text-sm">
+        <SheetClose className="w-full max-w-[200px] bg-[#D8EFD3] outline-none border border-border p-3 rounded-md text-sm">
           Continue Shopping
         </SheetClose>
       </div>

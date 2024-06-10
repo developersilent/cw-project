@@ -29,7 +29,7 @@ function ItemsCard({ description, img, price, title, id, typeOfData }: SingleCar
   return (
     <div
       key={id}
-      className="bg-gradient-to-b from-slate-900 via-amber-50 dark:bg-gray-950 rounded-xl overflow-hidden shadow-sm transition-all md:hover:scale-105 hover:shadow-md "
+      className="bg-gradient-to-b from-slate-900 via-amber-50 to-white/80 dark:bg-gray-950 rounded-xl overflow-hidden shadow-sm transition-all md:hover:scale-105 hover:shadow-md "
     >
       <Link
         href={{ pathname: `/store/${id}`, query: { title, typeOfData } }}

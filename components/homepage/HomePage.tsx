@@ -20,7 +20,7 @@ export default function HomePage() {
       <main className="flex-1">
         <section
           id="home"
-          className="w-full pt-10 md:pt-24 lg:pt-32 bg-[#ffffff] max-sm:py-5"
+          className="w-full pt-10 md:pt-24 lg:pt-32 max-sm:py-5"
         >
           <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid max-w-[1300px] mx-auto gap-0 max-sm:gap-7 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
@@ -37,12 +37,12 @@ export default function HomePage() {
               </RevealAnimationWithXFromLeft>
               <div className="flex flex-col gap-3 justify-center sm:mt-5 max-sm:mt-7">
                 <RevealAnimation>
-                  <h1 className="max-sm:text-[33px] sm:text-5xl md:text-6xl lg:text-7xl leading-9 font-bold text-[rgb(29,32,32)]">
+                  <h1 className="max-sm:text-[33px] bg-white/60 sm:text-5xl md:text-6xl lg:text-7xl leading-9 font-bold text-[rgb(29,32,32)]">
                     <TextAnimation text="Courage The Cowardly Dog" />
                   </h1>
                 </RevealAnimation>
                 <RevealAnimationWithXFromRight>
-                  <p className="mx-auto max-sm:text-[19px] max-w-[700px] text-[#0e1113] md:text-xl sm:text-lg dark:text-[#f8f8f8]">
+                  <p className="mx-auto bg-white/50 max-sm:text-[19px] max-w-[700px] text-[#0e1113] md:text-xl sm:text-lg dark:text-[#f8f8f8]">
                     Courage is a pink dog who lives with his elderly owners,
                     Muriel and Eustace, in the middle of Nowhere, Kansas.
                     Despite his cowardly nature, Courage bravely fights monsters
@@ -60,7 +60,7 @@ export default function HomePage() {
         >
           <div className="container px-4 md:px-6 mt-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 grid gap-1">
+              <div className="space-y-2 grid gap-1 bg-white/50">
                 <div className="inline-block rounded-lg px-3 py-2 w-full font-semibold text-xl text-[#26314b]">
                   Courage&apos;s Home
                 </div>
@@ -88,7 +88,7 @@ export default function HomePage() {
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
-              <div className="space-y-2 grid gap-1 place-content-center">
+              <div className="space-y-2 grid gap-1 place-content-center bg-white/50">
                 <div className="inline-block rounded-lg w-full px-3 py-2 text-xl font-semibold text-[#1e2b38] dark:bg-gray-600">
                   Courage&apos;s Defenses
                 </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
                   </p>
                 </RevealAnimationWithXFromLeft>
               </div>
-              <div className="grid grid-cols-1 pt-24 gap-5 sm:grid-cols-2 md:grid-cols-3">
+              <div className="grid bg-blend-exclusion bg-white/50 grid-cols-1 pt-24 gap-5 sm:grid-cols-2 md:grid-cols-3">
                 <FeatureCard
                   icon={<IconClock />}
                   title="Alarm System"
