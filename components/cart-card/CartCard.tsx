@@ -1,92 +1,46 @@
 "use client";
-import { Button } from "../ui/button";
-import { IconMinus, IconPlus, IconTrash } from "@tabler/icons-react";
 import { StoreValues } from "@/types/Types";
-import { Separator } from "../ui/separator";
 import Image from "next/image";
+import { Separator } from "../ui/separator";
+import RevealAnimationWithXFromRight from "../animation/RevealAnimationWithXFromRight";
 import { useAppDispatch } from "@/helper/hook/redux-store-hook";
-import {
-  addToCart,
-  decreaseQuantity,
-  removeFromCart,
-} from "@/helper/redux-store/slices-functions/StoreSlice";
+import { removeFromCart } from "@/helper/redux-store/slices-functions/StoreSlice";
+import { toast } from "../ui/use-toast";
 
-export default function CartCard({
+export default function Component({
+  description,
   id,
   img,
   price,
   title,
-  description,
   count,
 }: StoreValues) {
   const dispatch = useAppDispatch();
-  const handleIncrease = () => {
-    dispatch(
-      addToCart({
-        id,
-        title,
-        img,
-        price,
-        description,
-        count,
-      })
-    );
-  };
-
-  const handleDecrease = () => {
-    dispatch(
-      decreaseQuantity({
-        id,
-        title,
-        description,
-        img,
-        price,
-        count,
-      })
-    );
-  };
-
-  const removefromCart = () => {
-    dispatch(
-      removeFromCart({
-        id,
-        title,
-      })
-    );
-  };
   return (
-    <>
-      <div
-        className="grid md:grid-cols-[120px_1fr_100px] gap-4 items-center p-4 md:mr-40"
+    <RevealAnimationWithXFromRight SpeedOfAnimation={0.45}>
+      <li
         key={id}
+        
+        className="grid grid-cols-[80px_1fr_80px] items-center gap-4 overflow-hidden"
       >
         <Image
           src={img}
-          alt="Product Image"
-          width={120}
-          height={120}
-          className="rounded-lg object-contain"
+          alt={title}
+          width={90}
+          height={90}
+          className="rounded-md object-contain aspect-square scale-125 pointer-events-none"
         />
-        <div className="grid px-3">
-          <h3 className="font-semibold">{title}</h3>
+        <div className="grid gap-1">
+          <h3 className="font-medium">{title}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Quantity: {count}
+          </p>
         </div>
-        <div className="flex gap-4 items-center md:justify-center">
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={handleDecrease}>
-              <IconMinus size={15} />
-            </Button>
-            <span>{count}</span>
-            <Button variant="outline" size="sm" onClick={handleIncrease}>
-              <IconPlus size={15} />
-            </Button>
-          </div>
-          <div className="text-right font-semibold">${price}</div>
-          <Button variant="outline" size="sm" onClick={removefromCart}>
-            <IconTrash size={17} color="red"/>
-          </Button>
+        <div className="text-right font-semibold sm:text-base text-[15px] px-3 text-green-500">
+          ${price}
         </div>
-      </div>
+      </li>
       <Separator />
-    </>
+    </RevealAnimationWithXFromRight>
   );
 }

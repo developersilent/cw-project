@@ -9,7 +9,7 @@ import { addToCart } from "@/helper/redux-store/slices-functions/StoreSlice";
 import Link from "next/link";
 import { toast } from "../ui/use-toast";
 import { Toaster } from "../ui/toaster";
-import RevealAnimationWithXFromRight from "../animation/RevealAnimationWithXFromRight";
+import RevealAnimation from "../animation/RevealAnimation";
 
 
 export default function SingleProductPage({
@@ -24,18 +24,20 @@ export default function SingleProductPage({
     dispatch(addToCart({ description, id, img, price, title }));
     toast({
       description: `${title} added to cart`,
-      duration: 1000,
+      duration: 900,
       style: {
-        background: "#3f5055",
+        background: "#D8EFD3",
         border: "none",
         outline: "none",
-        color: "white",
+        color: "#0F0F0F",
+        fontSize: "1.7rem",
+        zIndex: 9999,
       },
     });
   }
   return (
-    <div className="w-full overflow-hidden">
-      <nav className="px-3 py-2 fixed top-0 z-50 mb-20 bg-white w-full h-16 grid items-center">
+    <div className="w-full overflow-x-hidden flex h-svh items-center justify-center">
+      <nav className="px-5 py-2 fixed top-0 z-50 mb-20 bg-white w-full h-16 grid items-center">
         <Link
           href="/store"
           className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-3 transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
@@ -44,7 +46,7 @@ export default function SingleProductPage({
           <IconChevronLeft />
         </Link>
       </nav>
-      <RevealAnimationWithXFromRight>
+      <RevealAnimation>
         <section
           className="grid space-x-2 space-y-8 md:grid-cols-2 gap-4 items-center py-10 md:py-16 max-w-[930px] mx-auto px-4 md:px-6"
           key={id}
@@ -55,7 +57,7 @@ export default function SingleProductPage({
                 alt="Product Image"
                 width={200}
                 height={200}
-                className=" size-full scale-95 object-contain drop-shadow-2xl aspect-square"
+                className=" size-full object-center max-sm:mt-20 scale-95 object-contain drop-shadow-2xl aspect-square max-sm:object-bottom"
               />
             </div>
           <div className="space-y-4">
@@ -94,8 +96,8 @@ export default function SingleProductPage({
             </div>
           </div>
         </section>
-      </RevealAnimationWithXFromRight>
       <Toaster />
+      </RevealAnimation>
     </div>
   );
 }

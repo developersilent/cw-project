@@ -4,15 +4,14 @@ import StoreTopNav from "../storenav/StoreTopNav";
 import { toolsData } from "@/tools-data";
 import TextAnimation from "../animation/TextAnimation";
 import RevealAnimation from "../animation/RevealAnimation";
-
+import { Toaster } from "@/components/ui/toaster";
 export default function StorePage() {
   const melee = toolsData.melee;
   const throwable = toolsData.throwable;
   const renderItems = useCallback(function(){
     const th = throwable.map((item) => (
-      <RevealAnimation key={item.id}>
+      <RevealAnimation key={item.title}>
         <ItemsCard
-          key={item.title}
           description={item.description}
           id={item.id}
           img={item.image.src}
@@ -24,9 +23,8 @@ export default function StorePage() {
     ));
 
     const melees = melee.map((item) => (
-      <RevealAnimation key={item.id}>
+      <RevealAnimation key={item.title}>
         <ItemsCard
-          key={item.title}
           description={item.description}
           id={item.id}
           img={item.image.src}
@@ -41,7 +39,7 @@ export default function StorePage() {
 
   return (
     <>
-      <section className="relative dark:bg-gray-950 py-12 md:py-16 lg:py-20">
+      <section className="relative py-12 md:py-16 lg:py-20">
         <StoreTopNav />
         <div className="container px-4 md:px-6 mt-14">
           <div className="max-w-2xl mx-auto text-center space-y-2">
@@ -68,6 +66,7 @@ export default function StorePage() {
           </div>
         </div>
       </section>
+      <Toaster/>
     </>
   );
 };

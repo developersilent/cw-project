@@ -1,8 +1,12 @@
 "use client";
-import { ReactChildrenProps } from "@/types/Types";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useRef } from "react";
-export default function RevealAnimationWithXFromRight({ children }: ReactChildrenProps) {
+
+interface ReactChildrenProps{
+  children: React.ReactNode;
+  SpeedOfAnimation?: number;
+}
+export default function RevealAnimationWithXFromRight({ children, SpeedOfAnimation }: ReactChildrenProps) {
   const controls = useAnimation();
   const element = useRef(null);
   const inView = useInView(element, { once: true });
@@ -19,7 +23,7 @@ export default function RevealAnimationWithXFromRight({ children }: ReactChildre
       initial="hidden"
       animate={controls}
       transition={{
-        duration: 0.8,
+        duration: SpeedOfAnimation || 0.8,
         delay: 0.01,
         ease: "easeInOut",
       }}
