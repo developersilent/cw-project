@@ -43,10 +43,10 @@ export default function StorePage() {
         <StoreTopNav />
         <div className="container px-4 md:px-6 mt-14">
           <div className="max-w-2xl mx-auto text-center space-y-2">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl bg-white/50 font-bold tracking-tight">
               <TextAnimation text="Discover Our Curated Collection" />
             </h1>
-            <div className="text-gray-600 dark:text-gray-400 text-lg md:text-xl mx-6">
+            <div className="text-gray-600 dark:text-gray-400 bg-white/50 text-lg md:text-xl mx-6">
               <TextAnimation
                 text="Explore our wide range of high-quality tools, carefully selected
               to meet your needs."
