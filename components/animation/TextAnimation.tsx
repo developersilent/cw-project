@@ -3,7 +3,7 @@ import {motion, useInView, useAnimation} from "framer-motion"
 import { useRef } from "react"
 
 const va = {
-   hidden: { opacity: 0, y: 20},
+   hidden: { opacity: 0, y: 60},
    visible: { opacity: 1 , y: 0}
 }
 export default function TextAnimation({text}: {text: string}) {
@@ -22,7 +22,11 @@ export default function TextAnimation({text}: {text: string}) {
       transition={{ staggerChildren: 0.07, duration: 0.4, ease: "easeInOut" }}
     >
       {text.split(" ").map((word, index) => (
-        <motion.span key={word + "-" + index} variants={va}>
+        <motion.span
+          key={word + "-" + index}
+          variants={va}
+          className="hover:text-[#FF204E] transition-all duration-300"
+        >
           {word + (index !== text.split(" ").length - 1 ? " " : "")}
         </motion.span>
       ))}

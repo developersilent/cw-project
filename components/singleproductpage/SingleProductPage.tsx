@@ -9,7 +9,6 @@ import { addToCart } from "@/helper/redux-store/slices-functions/StoreSlice";
 import Link from "next/link";
 import { toast } from "../ui/use-toast";
 import { Toaster } from "../ui/toaster";
-import RevealAnimation from "../animation/RevealAnimation";
 import { GridBackgroundDemo } from "../animation/GridBackGround";
 
 export default function SingleProductPage({
@@ -23,7 +22,7 @@ export default function SingleProductPage({
   const hanndleAddToCart = () => {
     dispatch(addToCart({ description, id, img, price, title }));
     toast({
-      description: `${title} added to cart`,
+      description: `${title} added`,
       duration: 900,
       style: {
         background: "#D8EFD3",
@@ -47,7 +46,6 @@ export default function SingleProductPage({
             <IconChevronLeft />
           </Link>
         </nav>
-        <RevealAnimation>
           <section
             className="grid space-x-2 space-y-8 md:grid-cols-2 gap-4 items-center py-10 md:py-16 max-w-[930px] mx-auto px-4 md:px-6"
             key={id}
@@ -58,11 +56,13 @@ export default function SingleProductPage({
                 alt="Product Image"
                 width={200}
                 height={200}
-                className=" size-full object-center max-sm:mt-20 scale-95 object-contain drop-shadow-2xl aspect-square max-sm:object-bottom"
+                className=" size-full hover:scale-100 transition-transform duration-300 object-center max-sm:mt-20 scale-95 object-contain drop-shadow-2xl aspect-square max-sm:object-bottom"
               />
             </div>
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-bold bg-white/50">{title}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold bg-white/50">
+                {title}
+              </h1>
               <div className="text-gray-500 text-lg bg-white/50">
                 <TextAnimation text={description} />
               </div>
@@ -97,9 +97,8 @@ export default function SingleProductPage({
               </div>
             </div>
           </section>
-          <Toaster />
-        </RevealAnimation>
       </div>
+          <Toaster />
     </GridBackgroundDemo>
   );
 }
