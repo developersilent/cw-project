@@ -28,7 +28,7 @@ export default function CartMenu() {
   };
 
   return (
-    <Sheet modal>
+    <Sheet>
       <SheetTrigger asChild>
         <Button className="rounded-full" size="icon" variant="ghost">
           <IconShoppingCart className="w-6 h-6" />
@@ -39,10 +39,10 @@ export default function CartMenu() {
         {itemsCount === 0 ? (
           <EmptyCart />
         ) : (
-          <div className="h-full w-full px-4 py-4 overflow-hidden">
+          <div className="h-full w-full px-4 py-3 overflow-hidden">
             <div className="flex h-full flex-col">
               <div className="mb-6 border-b pb-4 flex items-center justify-between">
-                <h2 className="text-xl">Cart</h2>
+                <h2 className="text-[18px]">Cart</h2>
               </div>
               <ScrollArea
                 className="flex-1 z-50 px-3 overflow-x-hidden overflow-y-auto"
@@ -57,21 +57,22 @@ export default function CartMenu() {
               </ScrollArea>
               <div className="mt-6 pt-4">
                 <div className="flex items-center justify-between">
-                  <p className="text-sm font-medium">items: {count}</p>
-                  <p className="text-sm font-semibold text-green-500">
+                  <p className="text-[13px] font-medium">items: {count}</p>
+                  <p className="text-[13px] font-semibold text-green-500">
                     ${totalAmount.toFixed(2)}
                   </p>
                 </div>
                 <div className="mt-4 grid gap-2">
                   <Button
                     size="sm"
-                    className="p-1 bg-[#222523] text-slate-100 hover:bg-[#111]"
+                    className="p-1 bg-[#222523] font-semibold tracking-wider border-none outline-none text-slate-100 hover:bg-[#111]"
                   >
                     Checkout
                   </Button>
                   <Button
+                    variant={"ghost"}
                     size="sm"
-                    className="p-1 bg-slate-100 text-red-500 border hover:bg-slate-200"
+                    className="p-1 bg-slate-200 font-semibold tracking-wide border-none outline-none text-black border hover:bg-slate-300"
                     onClick={clearCart}
                   >
                     Clear Cart

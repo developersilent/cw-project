@@ -37,7 +37,7 @@ export default function SingleProductPage({
   };
   return (
     <GridBackgroundDemo>
-      <div className="w-full overflow-x-hidden flex h-svh items-center justify-center">
+      <div className="w-full overflow-x-hidden flex h-svh items-center justify-center bg-white/50">
         <nav className="px-5 py-2 fixed top-0 z-50 mb-20 bg-gradient-to-b from-white via-white w-full h-20 grid items-start p-2">
           <Link
             href="/store"

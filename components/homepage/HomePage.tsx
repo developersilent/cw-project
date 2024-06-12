@@ -16,7 +16,7 @@ import RevealAnimationWithXFromLeft from "../animation/RevealAnimationWithXFromL
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] overflow-hidden">
+    <div className="flex flex-col min-h-[100dvh] overflow-hidden bg-white/50">
       <main className="flex-1">
         <section
           id="home"
@@ -147,7 +147,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#ffffff] dark:bg-[#1e1e1e]">
+      <footer className="flex flex-col gap-2  sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6 bg-gradient-to-b from-white via-amber-50 dark:bg-[#1e1e1e]">
         <p className="text-xs text-[#333] dark:text-[#f8f8f8]">
           &copy; 2024 cw.project.com. All rights reserved.
         </p>
